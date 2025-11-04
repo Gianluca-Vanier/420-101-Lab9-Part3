@@ -70,7 +70,12 @@ public class CalcEngine
         if(previousOperator == '+') {
             displayValue = leftOperand + displayValue;
         }
-        else {
+        
+        if(previousOperator == ' ') {
+            displayValue = displayValue;
+        }
+        
+        if(previousOperator == '-') {
             displayValue = leftOperand - displayValue;
         }
         leftOperand = 0;
